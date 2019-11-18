@@ -35,8 +35,8 @@ module TreeSpell
     def transposition(i_place, direction)
       @word = input.dup
       w = word.dup
-      return  swap_first_two(w) if i_place + direction < 0
-      return  swap_last_two(w) if i_place + direction >= len
+      return swap_first_two(w) if i_place + direction < 0
+      return swap_last_two(w) if i_place + direction >= len
       swap_two(w, i_place, direction)
       w
     end

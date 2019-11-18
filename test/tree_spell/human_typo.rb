@@ -1,6 +1,6 @@
 # module for classes needed to test TreeSpellChecker
 module TreeSpell
-  require_relative 'change_word'
+  require_relative "change_word"
   # Simulate an error prone human typist
   # see doc/human_typo_api.md for the api description
   class HumanTypo
@@ -42,13 +42,13 @@ module TreeSpell
     end
 
     def rand_char
-      popular_chars =  alphabetic_characters + special_characters
+      popular_chars = alphabetic_characters + special_characters
       n = popular_chars.length
       popular_chars[rand(n)]
     end
 
     def alphabetic_characters
-      ('a'..'z').to_a.join + ('A'..'Z').to_a.join
+      ("a".."z").to_a.join + ("A".."Z").to_a.join
     end
 
     def special_characters
